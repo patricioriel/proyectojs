@@ -1,0 +1,31 @@
+#contenedorProductos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    background-color: rgba(114, 16, 206, 0.37);
+    text-align: center;
+    
+}
+
+.botoncss{
+    background-color: blueviolet;
+    border-color: whitesmoke;
+    color: white;
+}
+
+.botoncss:hover{
+    background-color:rgb(64, 0, 124);
+    border-color: whitesmoke;
+    color: white;
+}
+
+.carritoCard{
+    width: 100%;
+}
