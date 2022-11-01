@@ -45,29 +45,7 @@ const mostrarProductos = () =>{
       </div>`
     
     contenedorProductos.appendChild(card);
-    
-    const boton = document.getElementById(`boton${torta.id}`);
-    boton.addEventListener("click", () =>{
-        agregarAlCarrito(torta.id) 
     })
-    })
-}
-
-//mostrarProductos()
-
-const agregarAlCarrito = (id) =>{
-    const torta = tortas.find((torta)=> torta.id === id);
-    const productoEnCarrito = carrito.find((torta)=>torta.id === id);
-    if (productoEnCarrito){
-        productoEnCarrito.cantidad++;
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-    }
-    else{
-        carrito.push(torta)
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-    }
-    mostrarCarrito();
-    calcularTotal();
 }
 
 const restarDelCarrito = (id) =>{
@@ -83,8 +61,6 @@ const restarDelCarrito = (id) =>{
     mostrarCarrito();
     calcularTotal();
 }
-
-
 
 const contenedorCarrito = document.getElementById("contenedorCarrito");
 const verCarrito = document.getElementById("verCarrito");
@@ -135,11 +111,7 @@ const mostrarCarrito = () =>{
       boton3.addEventListener("click", () => {
           restarDelCarrito(torta.id)
       })
-
     })
-
-    
-
     calcularTotal();
 }
 
