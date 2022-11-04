@@ -2,14 +2,10 @@ class torta{
     constructor(id,nombre,precio,img){
         this.id = id;
         this.nombre = nombre;
-        this.precio = precio;
+        this.precio = precio
         this.img = img
         this.cantidad = 1
     }
-    sumarUnidades(){
-        let suma=this.cantidad++
-         return suma
-         }
 }
 
 
@@ -30,23 +26,23 @@ if(localStorage.getItem("carrito")){
 
 const contenedorProductos = document.getElementById("contenedorProductos");
 
-const mostrarProductos = () =>{
-    tortas.forEach((torta)=>{
-        const card = document.createElement("div");
-        card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
-        card.innerHTML = `
-        <div class="card" style="width: 18rem;">
-        <img src="${torta.img}" class="card-img-top" alt="${torta.nombre}">
-        <div class="card-body">
-          <h5 class="card-title">${torta.nombre}</h5>
-          <p class="card-text">$${torta.precio}</p>
-          <button class="btn botoncss" id="boton${torta.id}"> Agregar al Carrito </button>
-        </div>
-      </div>`
+// const mostrarProductos = () =>{
+//     tortas.forEach((torta)=>{
+//         const card = document.createElement("div");
+//         card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
+//         card.innerHTML = `
+//         <div class="card" style="width: 18rem;">
+//         <img src="${torta.img}" class="card-img-top" alt="${torta.nombre}">
+//         <div class="card-body">
+//           <h5 class="card-title">${torta.nombre}</h5>
+//           <p class="card-text">$${torta.precio}</p>
+//           <button class="btn botoncss" id="boton${torta.id}"> Agregar al Carrito </button>
+//         </div>
+//       </div>`
     
-    contenedorProductos.appendChild(card);
-    })
-}
+//     contenedorProductos.appendChild(card);
+//     })
+// }
 
 const restarDelCarrito = (id) =>{
     const torta = tortas.find((torta)=> torta.id === id);

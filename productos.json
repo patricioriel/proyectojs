@@ -1,0 +1,5 @@
+[
+    {"id":1, "nombre": "Brownie", "precio":2500, "img": "imagenes/brownie.jpg", "cantidad":1},{"id":2, "nombre": "Cheesecake", "precio":2000, "img": "imagenes/cheescake.jpg", "cantidad":1
+    },{"id":3, "nombre": "Ferrero cake", "precio":2600, "img": "imagenes/ferrero.jpg", "cantidad":1},{"id":4, "nombre": "Lemon pie", "precio":1900, "img": "imagenes/lemonpie.jpg", "cantidad":1
+}
+]

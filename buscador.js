@@ -1,3 +1,26 @@
+
+let precioDolarblue;
+
+const precioDolar = "https://criptoya.com/api/dolar"
+
+const contenedorDolar = document.getElementById("contenedorDolar");
+
+
+    fetch(precioDolar)
+        .then( response => response.json())
+        .then(({blue}) => {
+            const precioDolarblue = blue;
+            console.log (precioDolarblue)
+            contenedorDolar.innerHTML= `
+                <h2>Tipos de Dolar: </h2>
+                <p> Dolar Blue: ${blue} </p>
+                `
+        })
+        .catch(error => console.error(error))
+
+
+console.log(precioDolarblue)
+
 const buscador = document.getElementById("buscador");
 const resultado = document.getElementById("resultado");
 
@@ -10,11 +33,11 @@ const filtrar = () =>{
 
         if (nombre.indexOf(texto) !== -1){
             resultado.innerHTML += `
-            <div class="card" style="width: 18rem; col-xl-3", "col-md-6", "col-xs-12">
+            <div class="card" style="width: 18rem;">
         <img src="${torta.img}" class="card-img-top" alt="${torta.nombre}">
         <div class="card-body">
           <h5 class="card-title">${torta.nombre}</h5>
-          <p class="card-text">$${torta.precio}</p>
+          <p class="card-text">$${(torta.precio)}</p>
           <button class="btn botoncss" onclick="agregarAlCarrito(${torta.id})" id="boton${torta.id}"> Agregar al Carrito </button>
         </div>
       </div>
@@ -44,3 +67,5 @@ const agregarAlCarrito = (id) =>{
 
 buscador.addEventListener('keyup', filtrar)
 filtrar();
+
+const listado = document.getElementById("listado");
