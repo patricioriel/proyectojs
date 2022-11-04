@@ -10,34 +10,34 @@
 </head>
 
 <body>
-    <h1>Proyecto Patricio Riel</h1>
+ <header>
+  <h1>Proyecto Patricio Riel</h1>
+  <button id="verCarrito" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver carrito</button>
 
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="contenedorCarrito"></div>
+      <button id="vaciarCarrito" class="btn btn-primary" type="button">Vaciar carrito</button>
+  <div id="total"></div>
+    </div>
+  </div>
+ </header>
     
 
     <input type="text" id="buscador" class="form-control mb-2">
 
     <div class="row" id="resultado"></div>
-
-    <h2>Carrito de compras</h2>
     
-    <button id="verCarrito" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver carrito</button>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu carrito</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div id="contenedorCarrito"></div>
-    <button id="vaciarCarrito" class="btn btn-primary" type="button">Vaciar carrito</button>
-<div id="total"></div>
-  </div>
-</div>
 
 
 <div id="listado"></div>
 
-<div id="contenedorDolar"></div>
+<div id="contenedorProductos"></div>
 
     
     

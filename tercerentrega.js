@@ -9,12 +9,12 @@ class torta{
 }
 
 
-const brownie = new torta (01,"Brownie", 2500, "imagenes/brownie.jpg")
-const cheescake = new torta (02,"Cheescake", 2000, "imagenes/cheescake.jpg")
-const ferrero = new torta (03,"Ferrero cake", 2600, "imagenes/ferrero.jpg")
-const lemonpie = new torta (04,"Lemon Pie", 1900, "imagenes/lemonpie.jpg")
-const matilda = new torta (05,"Matilda", 2400, "imagenes/matilda.jpg")
-const ricota = new torta (06,"Torta de ricota", 2200, "imagenes/ricota.jpg")
+const brownie = new torta (01,"Brownie", 9, "imagenes/brownie.jpg")
+const cheescake = new torta (02,"Cheescake", 8, "imagenes/cheescake.jpg")
+const ferrero = new torta (03,"Ferrero cake", 10, "imagenes/ferrero.jpg")
+const lemonpie = new torta (04,"Lemon Pie", 7, "imagenes/lemonpie.jpg")
+const matilda = new torta (05,"Matilda", 11, "imagenes/matilda.jpg")
+const ricota = new torta (06,"Torta de ricota", 6, "imagenes/ricota.jpg")
 
 const tortas = [brownie, cheescake, ferrero, lemonpie, matilda, ricota];
 
@@ -39,10 +39,12 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 //           <button class="btn botoncss" id="boton${torta.id}"> Agregar al Carrito </button>
 //         </div>
 //       </div>`
-    
+ 
 //     contenedorProductos.appendChild(card);
 //     })
 // }
+
+// mostrarProductos()
 
 const restarDelCarrito = (id) =>{
     const torta = tortas.find((torta)=> torta.id === id);
