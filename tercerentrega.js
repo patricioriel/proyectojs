@@ -23,6 +23,8 @@ if(localStorage.getItem("carrito")){
     carrito = JSON.parse(localStorage.getItem("carrito"))
 }
 
+let dolarucos = JSON.parse(localStorage.getItem("dolar"))
+console.log(dolarucos)
 
 const contenedorProductos = document.getElementById("contenedorProductos");
 
@@ -82,7 +84,7 @@ const mostrarCarrito = () =>{
             <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">${torta.nombre} </h5>
-                <p class="card-text">Precio por unidad: $${torta.precio}</p>
+                <p class="card-text">Precio por unidad: $${torta.precio * dolarucos}</p>
                 <p class="card-text">${torta.cantidad} Unidades</p>
                 <button class="btn botoncss" id="eliminar${torta.id}"> Eliminar del carrtio </button>
                 <button class="btn botoncss" id="sumar${torta.id}"> + </button>
@@ -138,5 +140,5 @@ const calcularTotal = () =>{
     carrito.forEach((torta) =>{
         totalCompra += torta.precio * torta.cantidad;
     })
-    total.innerHTML = `Total: $ ${totalCompra}`;
+    total.innerHTML = `Total: $ ${totalCompra * dolarucos}`;
 }
