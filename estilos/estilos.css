@@ -1,0 +1,78 @@
+body{
+    margin: 10px;
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+}
+
+.offcanvas{
+    background: radial-gradient(circle, #fad2e4 0%, #cae1fc 100%);
+}
+
+#resultado{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+#verCarrito{
+    width: 70px;
+    background-image: url(../imagenes/carrito.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px;
+    height:50px;
+    margin-right: 15px;
+}
+
+.basura{
+    width: 42px;
+    background-image: url(../imagenes/basura.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 38px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.suma{
+    width: 40px;
+    background-image: url(../imagenes/suma.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    height: 40px;
+}
+
+.resta{
+    width: 40px;
+    background-image: url(../imagenes/resta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    height: 40px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    background-color: rgba(114, 16, 206, 0.37);
+    text-align: center;
+    
+}
+
+.botoncss{
+    background-color: blueviolet;
+    border-color: whitesmoke;
+    color: white;
+}
+
+.botoncss:hover{
+    background-color:rgb(64, 0, 124);
+    border-color: whitesmoke;
+    color: white;
+}
+
+.carritoCard{
+    width: 100%;
+}
